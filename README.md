@@ -57,16 +57,19 @@ This will later be replaced with real payment gateways such as:
 │── login.php
 │── admin.php
 │── style.css
-│── config.php (planned)
+│── config.php
+│── index.php
+│── test.php (for testing login and password)
+│── style.css (added)
 ```
 
 ---
 
 ## 🎯 Future Goals
 
-* Complete user registration and authentication system
+* Complete user registration and authentication system (added)
 * Build full food ordering workflow
-* Add cart and checkout system
+* Add cart and checkout system (added)
 * Integrate database properly
 * Implement payment gateway system
 * Make system production-ready
