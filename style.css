@@ -1,0 +1,266 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+h2 {
+    color: #ed8936;
+}
+
+p {
+    color: #a0aec0;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #2d3748;          /* or your current nav background */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);   /* optional - modern glass effect */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #111; /* Dark navbar */
+}
+
+/* Logo */
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Nav links horizontal */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav link style */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;   /* WHITE FONT */
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover lift */
+.nav-links a:hover {
+    color: #ed8936;
+    transform: translateY(-3px);
+}
+
+/* Animated underline */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #ed8936;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Login button */
+.login {
+    background-color: #4a5568;
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login:hover {
+    background-color: #ed8936;
+    color: #1a202c;
+}
+
+/* Cart */
+.cart {
+    position: relative;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+}
+
+.cart-count {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: #ed8936;
+    color: #1a202c;
+    border-radius: 50%;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* Darkness level */
+    z-index: 1;
+}
+
+/* Keep text above overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.see-menu {
+    background-color: #ed8936;
+    border: none;
+    color: #1a202c;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.see-menu:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+
+.fan-favorites, .mains {
+    padding: 3rem 2rem;
+}
+
+.fan-favorites h2, .mains h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.fan-favorites p, .mains p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #2d3748;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: calc(25% - 1rem);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: #e2e8f0;
+}
+.card img {
+    width: 100%;
+    height: 220px;        /* Fixed height */
+    object-fit: cover;    /* Crop nicely */
+}
+
+/* Chat button */
+.chat-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #ed8936;
+    color: #1a202c;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+}
+.appetizers, .desserts {
+    padding: 3rem 2rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
