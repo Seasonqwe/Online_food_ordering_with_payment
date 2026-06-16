@@ -24,10 +24,10 @@ As of now, the project is in its early development stage (Day 1). It currently i
 
 ## 🚧 Work in Progress
 
-* Database integration for user authentication
+* Database integration for user authentication (done)
 * Food menu management system
-* Order placement system
-* Cart functionality
+* Order placement system (done)
+* Cart functionality (done)
 * Payment system integration (test API module planned)
 
 ---
